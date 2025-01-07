@@ -1,11 +1,19 @@
 <div class="p-5">
+  <p>Valor del padre: {{ debeMostrarModal }}</p>
+
+  <app-my-modal [(visible)]="debeMostrarModal" />
+
+  <button class="btn btn-primary" (click)="debeMostrarModal = true">
+    Abrir modal
+  </button>
+
   <!--
     [] -> de entrada
     () -> eventos o salida datos
     [()] -> enlazamiento en doble sentido (entrada y salida)
   -->
 
-  <h2>Aprobados:</h2>
+  <h2 #tituloAprobados>Aprobados:</h2>
   <app-students-list
     (remove)="onRemove($event, 'studentsApproved')"
     [students]="studentsApproved"

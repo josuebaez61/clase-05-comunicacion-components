@@ -1,0 +1,22 @@
+<p>Valor hijo: {{ visible }}</p>
+<div
+  *ngIf="visible"
+  class="background d-flex justify-content-center align-items-center"
+>
+  <div class="card w-50">
+    <div class="card-body">
+      <h3>Hola mundo!</h3>
+      <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores
+        facere error aliquid dolorum, necessitatibus rem omnis, temporibus
+        itaque soluta dolores culpa consequuntur repudiandae consectetur vel et
+        nesciunt voluptatibus voluptatum labore!
+      </p>
+      <div class="d-flex justify-content-end">
+        <button (click)="visibleChange.emit(false)" class="btn btn-danger">
+          Cerrar
+        </button>
+      </div>
+    </div>
+  </div>
+</div>
