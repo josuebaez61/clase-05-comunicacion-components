@@ -1,0 +1,23 @@
+<div class="p-5">
+  <!--
+    [] -> de entrada
+    () -> eventos o salida datos
+    [()] -> enlazamiento en doble sentido (entrada y salida)
+  -->
+
+  <h2>Aprobados:</h2>
+  <app-students-list
+    (remove)="onRemove($event, 'studentsApproved')"
+    [students]="studentsApproved"
+  />
+
+  <div class="my-5">
+    <hr />
+  </div>
+
+  <h2>Desaprobados:</h2>
+  <app-students-list
+    (remove)="onRemove($event, 'studentsDesaprobados')"
+    [students]="studentsDesaprobados"
+  />
+</div>
